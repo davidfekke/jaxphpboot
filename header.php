@@ -6,9 +6,9 @@ if (!isset($title)) {
 
 function isActive($curTitle, $link) {
     if ($link == $curTitle) {
-        echo " class='active'";
+        echo "<li class='active'>";
     } else {
-        echo "";
+        echo "<li>";
     }
 }
 
@@ -62,9 +62,9 @@ function isActive($curTitle, $link) {
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li<?php isActive($title, 'Home') ?>><a href="#">Home</a></li>
-            <li<?php isActive($title, 'About') ?>><a href="#about">About</a></li>
-            <li<?php isActive($title, 'Contact') ?>><a href="#contact">Contact</a></li>
+            <?php isActive($title, 'Home') ?><a href="/">Home</a></li>
+            <?php isActive($title, 'About') ?><a href="/about.php">About</a></li>
+            <?php isActive($title, 'Contact') ?><a href="/contact.php">Contact</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
               <ul class="dropdown-menu">
